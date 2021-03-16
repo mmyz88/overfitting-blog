@@ -5,20 +5,20 @@
 If you have ever fitted a model, you probably remember that one time you tried again and again just for that last data point to fall on the line. Admit it, we’ve all been there, trying to make our model as "perfect" as possible. However, this is in fact dangerous. It could lead to what is called "overfitting", a phenomenom that is often not encouraged. 
 
 Let’s take a look at sample dataset below. Naturally, an intuitive model would be a curve that runs through the data points like this. <br> 
-<img src="https://raw.github.ubc.ca/MDS-2020-21/DSCI_542_lab2_mmyz/master/img/points.png?token=AAAAJ7K26HS56RBBRIVEDD3AJVVA4" width="250">
-<img src="https://raw.github.ubc.ca/MDS-2020-21/DSCI_542_lab2_mmyz/master/img/fit1.png?token=AAAAJ7JJKJQ6NLKQPPHZIA3AJVU6C" width="270">
+<img src="https://raw.githubusercontent.com/mmyz88/overfitting-blog/gh-pages/img/points.png" width="250">
+<img src="https://raw.githubusercontent.com/mmyz88/overfitting-blog/gh-pages/img/fit1.png" width="270">
 
 However, you might feel a little uncomfortable with that last data point, so you refitted the model with a higher degree to accommodate it. 
 
-<img src="https://raw.github.ubc.ca/MDS-2020-21/DSCI_542_lab2_mmyz/master/img/fit2.png?token=AAAAJ7KZRYYMNHVY2YBGNJLAJVVIU" width="270">
+<img src="https://raw.githubusercontent.com/mmyz88/overfitting-blog/gh-pages/img/fit2.png" width="270">
 
 Now we have our model tailored to the last data point. But say we want to keep accommodating every single data point, then we might end up with something like this:
 
-<img src="https://raw.github.ubc.ca/MDS-2020-21/DSCI_542_lab2_mmyz/master/img/fit3.png?token=AAAAJ7IFXNFQ4CI7Q5XUTW3AJVVKA" width="270">
+<img src="https://raw.githubusercontent.com/mmyz88/overfitting-blog/gh-pages/img/fit3.png" width="270">
 
 It looks like a "perfect" model for our dataset, doesn’t it? Well… consider these new data points, which come from the same population but just weren't included in our initial dataset. How does our model appear to do now? 
 
-<img src="https://raw.github.ubc.ca/MDS-2020-21/DSCI_542_lab2_mmyz/master/img/preds.png?token=AAAAJ7MPJC6DXOX7T6324PTAJVVLY" width="270">
+<img src="https://raw.githubusercontent.com/mmyz88/overfitting-blog/gh-pages/img/preds.png" width="270">
 
 Not so well is it? We have essentially tailored our model specifically to the existing dataset at hand (yellow points). Our model learned not only the overall trend, but also the detail and noise among the yellow points. Therefore as we collect any new data (blue points), our model would do a bad job because it is tailored to describe the yellow points only, rather than the genuine relationship between the data points. This is the idea of overfitting.
 
